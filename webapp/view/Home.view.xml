@@ -1,7 +1,18 @@
 <mvc:View controllerName="com.lab2dev.traningproject.controller.Home"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
+    <Page showHeader="false" id="pageHome" title="{i18n>title}">
+        <content>
+            <List
+                id="idProductsList"
+                items="{
+                    path: '/Products'
+                    }">
+                <StandardListItem
+                    title="{ProductName}"
+                    counter="{ProductID}"
+                />
+            </List>
+        </content>
     </Page>
 </mvc:View>
